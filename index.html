@@ -88,6 +88,26 @@
   .steps b { display: block; margin-bottom: 2px; }
   .steps span { color: var(--ink-2); font-size: 14px; }
 
+  .idea a { color: var(--gold); font-weight: 600; }
+  .panel-w { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; display: grid; gap: 8px; }
+  .lt, .lt-head { display: grid; grid-template-columns: 120px 1fr 70px 84px; gap: 12px; align-items: center; font-size: 14px; }
+  .lt-head { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  .lt-head span:nth-child(2) { grid-column: 2 / 4; }
+  .lt-head span:nth-child(3) { display: none; }
+  .lt-head .r, .lt .p { text-align: right; }
+  .lt { padding: 4px 8px; margin-inline: -8px; border-radius: 8px; }
+  .lt.ok { background: color-mix(in srgb, var(--gold-bar) 14%, transparent); }
+  .lt .w { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .lt .bar { height: 14px; border-radius: 7px; background: var(--surface-2); overflow: hidden; }
+  .lt .bar i { display: block; height: 100%; background: var(--gold-bar); border-radius: 7px; }
+  .lt .bar i.hi { background: var(--red); }
+  .lt .v { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .lt .v.bad { color: var(--red); }
+  .lt .p { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+  .lt-key { margin: 6px 0 0; font-size: 12px; color: var(--ink-3); }
+  .lt-key i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; margin-right: 6px; background: color-mix(in srgb, var(--gold-bar) 30%, transparent); }
+  .fine { margin: 12px 0 0; font-size: 12px; color: var(--ink-3); max-width: 80ch; }
+  @media (max-width: 560px) { .lt, .lt-head { grid-template-columns: 70px 1fr 58px 44px; gap: 8px; font-size: 13px; } .lt-head { font-size: 10px; } }
   footer { margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: 12px; }
   @media (max-width: 560px) { .mes { grid-template-columns: 80px 1fr 70px; } }
 </style>
@@ -117,7 +137,7 @@
     <p class="lede">Una sola campaña para toda la gira, organizada por sede. Cada ciudad se promociona con su fecha y su lugar, y recibe su propio presupuesto.</p>
     <div class="ideas">
       <div class="idea"><b>Una sede, un presupuesto</b><p>Cada ciudad tiene su propio grupo de anuncios, dirigido a familias que viven a 25 millas de la sede. Así ninguna sede se queda sin inversión porque otra funcione mejor.</p></div>
-      <div class="idea"><b>En el momento justo</b><p>Cada sede empieza a anunciarse 8 a 10 semanas antes de su evento y termina el día del camp. En años anteriores, anunciar con más anticipación costó el doble por registro.</p></div>
+      <div class="idea"><b>En el momento justo</b><p>Cada sede empieza a anunciarse 8 a 10 semanas antes de su evento y termina el día del camp. En años anteriores, anunciar con más anticipación costó el doble por registro (<a href="#anticipacion">ver por qué</a>).</p></div>
       <div class="idea"><b>Anuncios con su ciudad</b><p>El padre de Chicago ve "Chicago · Nov 14–15" en todos los anuncios. Las piezas son las mismas en cada sede; cambian la ciudad, la fecha y el lugar.</p></div>
       <div class="idea"><b>Recordatorio</b><p>Un grupo aparte vuelve a mostrar la gira completa a quienes ya visitaron la web o interactuaron con Juventus Camps en Instagram y Facebook.</p></div>
     </div>
@@ -164,6 +184,40 @@
       </table>
     </div>
     <p class="lede" style="margin-top:14px">Los montos son un tope: se ajustan sede por sede con la asistencia real de años anteriores y con los resultados de cada semana.</p>
+  </section>
+
+  <section id="anticipacion">
+    <h2>¿Por qué 8 a 10 semanas antes?</h2>
+    <p class="lede">Lo muestra el historial de la cuenta: 25 clínicas de 2 días (el formato más parecido a un ID Camp), $15.069 invertidos y 1.722 registros. Cada registro se ubicó según cuántas semanas faltaban para el evento el día en que llegó.</p>
+    <div class="panel-w">
+      <div class="lt-head"><span>Semanas antes del evento</span><span>Costo por registro</span><span></span><span class="r">% de los registros</span></div>
+      <div class="lt"><span class="w">13 o más</span><span class="bar"><i class="hi" style="width:100%"></i></span><span class="v bad">$16,60</span><span class="p">2 %</span></div>
+      <div class="lt ok"><span class="w">10–12</span><span class="bar"><i style="width:47.3%"></i></span><span class="v">$7,85</span><span class="p">6 %</span></div>
+      <div class="lt ok"><span class="w">8–9</span><span class="bar"><i style="width:46.8%"></i></span><span class="v">$7,77</span><span class="p">13 %</span></div>
+      <div class="lt ok"><span class="w">6–7</span><span class="bar"><i style="width:50.4%"></i></span><span class="v">$8,36</span><span class="p">17 %</span></div>
+      <div class="lt ok"><span class="w">4–5</span><span class="bar"><i style="width:43.1%"></i></span><span class="v">$7,16</span><span class="p">23 %</span></div>
+      <div class="lt"><span class="w">2–3</span><span class="bar"><i style="width:57.5%"></i></span><span class="v">$9,54</span><span class="p">23 %</span></div>
+      <div class="lt"><span class="w">0–1</span><span class="bar"><i style="width:63.3%"></i></span><span class="v">$10,50</span><span class="p">17 %</span></div>
+      <p class="lt-key"><i></i>Franja más barata: de 4 a 12 semanas antes</p>
+    </div>
+    <div class="ideas" style="margin-top:14px">
+      <div class="idea"><b>Muy lejos, el doble</b><p>Con más de 12 semanas de anticipación el registro costó $16,60, el doble que en la franja buena. A esa distancia las familias todavía no están pensando en el evento.</p></div>
+      <div class="idea"><b>Muy cerca, más caro</b><p>Las últimas 3 semanas traen muchos registros, pero más caros: el público ya vio los anuncios varias veces. Por eso la campaña sale antes y no espera al final.</p></div>
+      <div class="idea"><b>No es que la campaña estuviera empezando</b><p>En esta cuenta la primera semana de cada campaña fue la más barata. Aun comparando solo campañas con 3 o más semanas al aire, lejos del evento costó $21,67 y a 4–7 semanas, $7,64.</p></div>
+    </div>
+
+    <h3 style="margin:28px 0 10px;font-size:17px">¿Aplica a todos los productos?</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Producto</th><th>¿Aplica?</th><th>Qué dicen los datos</th></tr></thead>
+        <tbody>
+          <tr><td><strong>ID Camps y clínicas</strong><span class="note">2 días</span></td><td><strong>Sí</strong></td><td>Es de donde sale la tabla. Mejor ventana: 4 a 12 semanas antes; la campaña usa 8 a 10.</td></tr>
+          <tr><td><strong>Camps de verano</strong><span class="note">1 semana</span></td><td><strong>Sí, con otra ventana</strong></td><td>La misma tendencia, pero la mejor ventana es más amplia. Las campañas lanzadas 2–3 meses antes fueron las más baratas ($9–$15 por registro); las lanzadas 6–8 meses antes, las más caras ($18 o más). Esa oleada temprana también llevaba mensajes navideños, que funcionaron mal por sí solos.</td></tr>
+          <tr><td><strong>Torneos</strong></td><td><strong>No está comprobado</strong></td><td>Esta cuenta no tiene campañas de torneos, así que no hay datos para afirmarlo. En un torneo se inscriben equipos y clubes, que planean viaje y calendario con más tiempo; la ventana puede ser distinta. Habría que revisar la cuenta de torneos antes de aplicar la regla.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">En años anteriores la cuenta registraba el clic en «Register Now», no la inscripción final. El tramo de más de 12 semanas tiene pocos datos (2 % de los registros); lo respalda lo ocurrido con los camps de verano.</p>
   </section>
 
   <section>
