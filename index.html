@@ -108,6 +108,25 @@
   .lt-key i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; margin-right: 6px; background: color-mix(in srgb, var(--gold-bar) 30%, transparent); }
   .fine { margin: 12px 0 0; font-size: 12px; color: var(--ink-3); max-width: 80ch; }
   @media (max-width: 560px) { .lt, .lt-head { grid-template-columns: 70px 1fr 58px 44px; gap: 8px; font-size: 13px; } .lt-head { font-size: 10px; } }
+
+  .vs th.now, .vs td.now { background: color-mix(in srgb, var(--gold-bar) 12%, var(--surface)); }
+  .vs td:first-child { font-weight: 600; white-space: nowrap; }
+  .vs td.why { color: var(--ink-2); font-size: 13px; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 2px 7px; border-radius: 6px; margin-left: 6px; vertical-align: 1px; }
+  .tag.same { background: color-mix(in srgb, var(--red) 14%, transparent); color: var(--red); }
+  .funnel { display: grid; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+  .fstep { display: grid; grid-template-columns: 190px 1fr 120px; gap: 12px; align-items: center; font-size: 14px; }
+  .fstep .bar { height: 22px; border-radius: 6px; background: var(--surface-2); overflow: hidden; }
+  .fstep .bar i { display: block; height: 100%; background: var(--gold-bar); border-radius: 6px; }
+  .fstep .v { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .fstep .v small { display: block; font-weight: 500; color: var(--ink-3); font-size: 12px; }
+  @media (max-width: 560px) { .fstep { grid-template-columns: 1fr 90px; } .fstep .bar { grid-column: 1 / -1; order: 3; } }
+  .big { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-bottom: 18px; }
+  .big div { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+  .big b { display: block; font-family: var(--display); font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums; }
+  .big span { display: block; margin-top: 6px; font-size: 13px; color: var(--ink-2); }
+  .callout { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--red); border-radius: 12px; padding: 16px 20px; margin-top: 16px; }
+  .callout p { margin: 0 0 8px; color: var(--ink-2); font-size: 14px; } .callout p:last-child { margin: 0; }
   footer { margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: 12px; }
   @media (max-width: 560px) { .mes { grid-template-columns: 80px 1fr 70px; } }
 </style>
@@ -119,7 +138,7 @@
   <div class="wrap">
     <p class="eyebrow">Juventus Training Camps · Publicidad en Facebook e Instagram</p>
     <h1>Campaña <em>ID Camps</em><br>2026-27</h1>
-    <p class="sub">Cómo vamos a promocionar los ID Camps de esta temporada: la idea de la campaña, en qué orden salen las sedes, cómo se reparte el presupuesto y qué anuncios van a ver las familias.</p>
+    <p class="sub">Cómo vamos a promocionar los ID Camps de esta temporada, en qué se diferencia de lo que se hizo en años anteriores, qué resultados dejaron esas temporadas y qué esperamos de esta: estructura, presupuesto, anuncios y medición.</p>
     <dl class="keys">
       <div><dt>Sedes</dt><dd>7 en otoño<small>+ 3 en enero 2027</small></dd></div>
       <div><dt>Inicio</dt><dd>29 de septiembre<small>Chicago y Dallas</small></dd></div>
@@ -141,6 +160,109 @@
       <div class="idea"><b>Anuncios con su ciudad</b><p>El padre de Chicago ve "Chicago · Nov 14–15" en todos los anuncios. Las piezas son las mismas en cada sede; cambian la ciudad, la fecha y el lugar.</p></div>
       <div class="idea"><b>Recordatorio</b><p>Un grupo aparte vuelve a mostrar la gira a quienes ya visitaron la web o interactuaron con Juventus Camps en Instagram y Facebook. <strong>Muestra las 8 fechas de la gira desde el primer día</strong> (las 8 sedes se confirmaron el 29-09) y llega a quienes viven cerca de las 7 sedes de este año. Además del público de Instagram, Facebook y la web, incluye a las familias que ya se registraron en temporadas anteriores: unas 7.300, las que pagaron y las que se quedaron a medias. Nebraska se suma en enero.</p></div>
     </div>
+  </section>
+
+
+  <section id="antes-ahora">
+    <h2>Antes y ahora</h2>
+    <p class="lede">Qué cambia frente a cómo se promocionaron las clínicas en 2024-25 y 2025-26. Los datos de «antes» salen de la cuenta publicitaria (3 temporadas, $230.925 invertidos en 203 campañas).</p>
+    <div class="scroll">
+      <table class="vs">
+        <thead><tr><th>Tema</th><th>Antes (2024-26)</th><th class="now">Ahora (2026-27)</th><th>Por qué importa</th></tr></thead>
+        <tbody>
+          <tr><td>Estructura</td><td>Una campaña por sede y por oleada: 18 campañas de clínicas y 120 campañas en total en 2025-26. En mayo, Dallas llegó a tener 4 campañas activas a la vez compitiendo por el mismo público.</td><td class="now"><strong>Una sola campaña</strong> para toda la gira, con un grupo de anuncios por sede y un grupo de recordatorio.</td><td class="why">Todo se ve y se ajusta en un solo lugar, las sedes no compiten entre sí y Meta aprende más rápido con menos grupos.</td></tr>
+          <tr><td>Presupuesto</td><td>$10–35 al día por campaña, repartido entre 1 y 6 públicos (a veces $5–10 por grupo).</td><td class="now"><strong>$16–20 al día por sede</strong>, en un solo grupo, más $6 para el recordatorio.</td><td class="why">Con presupuestos muy repartidos ningún grupo junta los resultados que Meta necesita para aprender.</td></tr>
+          <tr><td>Anuncios por sede</td><td>Pocos anuncios y a menudo versiones del mismo video. En 2025-26, el 44 % de los grupos de la cuenta tuvo un solo anuncio; en el resto, uno solo se llevaba el 97 % del gasto.</td><td class="now"><strong>6 anuncios con 6 mensajes distintos</strong>: póster de la sede, video de los coaches, video de Jesús, carrusel explicativo, «Good enough» y «Train the Juventus way».</td><td class="why">En la cuenta, los grupos con 4 o más anuncios distintos consiguieron registros más baratos ($9,67 frente a $16,32).</td></tr>
+          <tr><td>Mensaje</td><td>El español se usó en algunas clínicas de 2024 (McAllen, Dallas, Indianapolis) y se dejó en 2025-26: todos los grupos fueron en inglés.</td><td class="now"><strong>Cada pieza lleva la ciudad, la fecha y la sede</strong>; los videos arrancan con la ciudad y su skyline. Puerto Rico, en español.</td><td class="why">El padre reconoce en un segundo que es para su ciudad. En esta cuenta el mismo video rindió más del doble en español.</td></tr>
+          <tr><td>Edad</td><td>18 a 65 años en 708 de 709 grupos. En 2025-26, el 25 % del gasto ($28.728) fue a personas de 18–24 y de más de 55.</td><td class="now"><strong>Sugerencia de 30 a 55 años</strong>, la edad de los padres de niños de 6 a 16.</td><td class="why">Menos dinero en personas que casi nunca inscriben a un niño.</td></tr>
+          <tr><td>Zona</td><td>5 a 10 millas alrededor de la sede, incluyendo a quienes «estuvieron recientemente» (turistas y visitantes).</td><td class="now"><strong>25 millas, solo quienes viven o hacen su vida en la zona</strong>. Turistas y gente de paso, fuera.</td><td class="why">Llega a las familias de toda el área metropolitana y deja fuera a quien no puede asistir.</td></tr>
+          <tr><td>Dónde se muestran</td><td>En 2025-26, ubicaciones automáticas: Audience Network (apps y juegos externos) se llevó el 46 % del gasto de la cuenta ($52.811) con clics accidentales.</td><td class="now"><strong>Solo Facebook e Instagram.</strong></td><td class="why">El presupuesto va a donde están los padres. En pantalla el costo por clic sube, pero es el real.</td></tr>
+          <tr><td>Momento</td><td>Variable: algunas oleadas salieron 6 a 8 meses antes y fueron las más caras ($18–$239 por registro).</td><td class="now"><strong>8 a 10 semanas antes</strong> de cada sede y fin el día del evento.</td><td class="why">Es la franja en que el registro costó menos en la cuenta (<a href="#anticipacion">ver por qué</a>).</td></tr>
+          <tr><td>Recordatorio</td><td>En algunas clínicas el recordatorio iba mezclado con públicos similares en el mismo grupo; no incluía a las familias ya registradas.</td><td class="now"><strong>Grupo de recordatorio</strong> con seguidores e interacciones de Instagram y Facebook, visitantes de la web y <strong>las 7.264 familias que se registraron en 2024-26</strong> (3.254 compraron).</td><td class="why">Fue el público más barato de la cuenta ($7,58 por registro en 2024-25). Ahora además incluye a quienes ya compraron o se quedaron a medias.</td></tr>
+          <tr><td>Seguimiento</td><td>Solo los clics que reporta Meta; no se sabía qué anuncio traía inscripciones.</td><td class="now"><strong>Etiquetas en cada enlace</strong> (sede y anuncio) y conteo semanal de registros y pagos por sede con los datos de la app.</td><td class="why">Se decide con inscripciones reales, no con clics.</td></tr>
+          <tr><td>Qué optimiza Meta</td><td>El clic en «Register Now».</td><td class="now">El mismo clic, <span class="tag same">por ahora igual</span> hasta instalar el píxel en la app de registro.</td><td class="why">Es la mejora pendiente más importante (<a href="#medicion">ver abajo</a>).</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="historial">
+    <h2>Lo que dejaron las temporadas anteriores</h2>
+    <p class="lede">Cruzamos lo invertido en cada campaña de clínicas con la base de inscritos de la app de registro (temporadas 2024-25 y 2025-26). Son los resultados reales de ventas, no los clics que reportaba Meta.</p>
+    <div class="big">
+      <div><b>7.264</b><span>familias se registraron en camps y clínicas de EE. UU. y Puerto Rico entre 2024 y 2026</span></div>
+      <div><b>3.254</b><span>de ellas compraron (pagaron, tienen saldo o crédito)</span></div>
+      <div><b>52 %</b><span>de las familias que empiezan el registro de una clínica terminan pagando</span></div>
+      <div><b>1,14</b><span>niños inscritos por cada familia que paga</span></div>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Clínicas con campaña en Meta</th><th>Inversión</th><th>Familias que pagaron</th><th>Niños pagados</th><th>Costo por familia</th><th>Costo por niño</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2024-25</strong><span class="note">6 clínicas con ventas · promedio 51 familias y 59 niños por clínica</span></td><td class="num">$4.516</td><td class="num">307</td><td class="num">356</td><td class="num"><strong>$14,7</strong></td><td class="num">$12,3</td></tr>
+          <tr><td><strong>2025-26</strong><span class="note">11 clínicas con ventas · promedio 35 familias y 39 niños por clínica</span></td><td class="num">$11.325</td><td class="num">380</td><td class="num">431</td><td class="num"><strong>$29,8</strong></td><td class="num">$26,3</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">Costo = inversión en Meta ÷ familias o niños que pagaron. No todas las ventas vienen de los anuncios (también llegan por orgánico, email y familias que repiten), así que el costo real atribuible a la publicidad es algo mayor. En 2025-26, $3.118 se invirtieron en 7 clínicas que no registran ningún pago (Indianapolis 2026, Boston, San Diego, Seattle, Jacksonville, Marshall y Chula Vista); probablemente se cancelaron, está por confirmar.</p>
+
+    <h3 style="margin:28px 0 10px;font-size:17px">Chicago y Dallas, las dos primeras sedes</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Clínica</th><th>Inversión</th><th>Familias registradas</th><th>Familias que pagaron</th><th>Niños pagados</th><th>Costo por niño</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Dallas · nov 2024</strong></td><td class="num">$877</td><td class="num">112</td><td class="num">48</td><td class="num">51</td><td class="num">$17</td></tr>
+          <tr><td><strong>Chicago · nov 2025</strong></td><td class="num">$727</td><td class="num">64</td><td class="num">30</td><td class="num">31</td><td class="num">$23</td></tr>
+          <tr><td><strong>Dallas · nov 2025</strong></td><td class="num">$660</td><td class="num">32</td><td class="num">16</td><td class="num">17</td><td class="num">$39</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin:28px 0 10px;font-size:17px">Cómo se registra una familia</h3>
+    <p class="lede">17 clínicas que se realizaron entre 2024 y 2026. El registro tiene dos pasos antes del pago: primero los datos del padre, después los del niño.</p>
+    <div class="funnel" role="img" aria-label="De 1.294 familias que empiezan el registro, 1.066 cargan los datos del niño y 673 pagan">
+      <div class="fstep"><span>Empiezan el registro<br><small style="color:var(--ink-3)">datos del padre</small></span><span class="bar"><i style="width:100%"></i></span><span class="v">1.294<small>100 %</small></span></div>
+      <div class="fstep"><span>Cargan al niño<br><small style="color:var(--ink-3)">paso 2</small></span><span class="bar"><i style="width:82.4%"></i></span><span class="v">1.066<small>82 %</small></span></div>
+      <div class="fstep"><span>Pagan</span><span class="bar"><i style="width:52%"></i></span><span class="v">673<small>52 %</small></span></div>
+    </div>
+    <p class="fine">Una de cada dos familias que empiezan el registro termina pagando. Las 4.010 que se registraron y no pagaron en temporadas anteriores están ahora en el grupo de recordatorio.</p>
+  </section>
+
+  <section id="medicion">
+    <h2>El problema de medición y el camino a una campaña de ventas</h2>
+    <p class="lede">Hoy el píxel de Meta cuenta como «cliente potencial» a cualquiera que toca un botón que dice «Register Now» en la web, aunque no llene nada. No ve quién se registra ni quién paga, porque el formulario y el pago están en otra web (la app de registro) que no tiene el píxel instalado.</p>
+    <div class="ideas">
+      <div class="idea"><b>Qué provoca</b><p>Meta aprende a buscar gente que toca el botón, no gente que compra. En tres años, los 13.612 «registros» que muestra la cuenta son en realidad clics en ese botón. No distingue a quien curiosea de quien inscribe a su hijo.</p></div>
+      <div class="idea"><b>Qué no se puede saber hoy</b><p>Cuántas inscripciones y ventas trae cada anuncio y cada sede, ni cuánto cuesta realmente una venta. Por eso, mientras tanto, contamos cada semana los registros y pagos con los datos de la app.</p></div>
+      <div class="idea"><b>La solución</b><p>Instalar el píxel en la app de registro y marcar dos momentos: <strong>registro creado</strong> y <strong>pago confirmado</strong> (con el monto). Ya se entregó al programador un documento con lo que hay que hacer.</p></div>
+    </div>
+    <ol class="steps" style="margin-top:16px">
+      <li><span class="n">1</span><div><b>Hoy · campaña de clientes potenciales</b><span>Optimiza al clic en «Register Now», como en años anteriores, y se mide con los datos de la app. Es lo que permite lanzar a tiempo Chicago y Dallas.</span></div></li>
+      <li><span class="n">2</span><div><b>Con el píxel en la app · registro real</b><span>Meta pasa a buscar familias que <strong>completan el registro</strong>, no que tocan un botón. Se ve el costo por inscripción de cada anuncio y sede.</span></div></li>
+      <li><span class="n">3</span><div><b>Meta final · campaña de ventas</b><span>Optimizar directamente a <strong>pagos</strong>, con el valor de cada venta: Meta busca a quien compra y se ve el retorno de cada dólar invertido. Meta recomienda unos 50 pagos por semana por grupo para aprender bien; se activa cuando haya ese volumen (por ejemplo, sumando varias sedes).</span></div></li>
+    </ol>
+  </section>
+
+  <section id="esperamos">
+    <h2>Qué esperamos</h2>
+    <p class="lede">Rangos calculados con el costo por niño de cada sede en años anteriores. Son optimistas, porque en el histórico no todas las ventas venían de los anuncios; se ajustan con los resultados de las primeras semanas.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Sede</th><th>Inversión</th><th>Referencia anterior</th><th>Niños esperados</th><th>Lo más probable</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Chicago</strong></td><td class="num">$940</td><td>2025: $23 por niño</td><td class="num">24–49</td><td class="num"><strong>≈ 40</strong></td></tr>
+          <tr><td><strong>Dallas</strong></td><td class="num">$972</td><td>2024: $17 · 2025: $39 por niño</td><td class="num">25–56</td><td class="num"><strong>≈ 35–40</strong></td></tr>
+          <tr><td><strong>Midland</strong></td><td class="num">$944</td><td>jun 2026: $10 por niño (82 niños)</td><td class="num">50–95</td><td class="num"><strong>≈ 50–60</strong></td></tr>
+          <tr><td><strong>Hawaii</strong></td><td class="num">$969</td><td>mar 2026: $18 por niño (37 niños)</td><td class="num">37–55</td><td class="num"><strong>≈ 45</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ideas" style="margin-top:14px">
+      <div class="idea"><b>La meta de 60 niños</b><p>Con este presupuesto es realista en Midland; en Chicago y Dallas lo probable es 35–45. Llegar a 60 requeriría unos $1.400 por sede, y solo se suma presupuesto a la sede que esté respondiendo.</p></div>
+      <div class="idea"><b>El ritmo a vigilar</b><p>60 niños ≈ 53 familias que pagan ≈ 100 familias que empiezan el registro. En Chicago y Dallas eso son unas 13–15 familias nuevas por semana.</p></div>
+      <div class="idea"><b>Lo que está en juego</b><p>60 niños a $225 son $13.500 por sede en los ID Camps de 2 días, y $20.700 a $345 en los de 3 días (Midland y Hawaii). La inversión por sede (≈ $950) es el 5–7 % de eso.</p></div>
+    </div>
+    <p class="fine">Primera revisión con datos reales: 10–13 de octubre. Mayagüez, Atlanta y Bayamón se suman al cuadro cuando salgan sus grupos (21 y 26 de octubre).</p>
   </section>
 
   <section>
@@ -238,14 +360,14 @@
     <h2>Cómo vamos a medir y ajustar</h2>
     <p class="lede">La campaña no queda fija: se revisa cada semana y el presupuesto se mueve hacia lo que funciona.</p>
     <ol class="steps">
-      <li><span class="n">1</span><div><b>Lo que importa son las inscripciones</b><span>Medimos cuántas familias completan el registro en cada sede y cuánto cuesta cada una, no los clics.</span></div></li>
+      <li><span class="n">1</span><div><b>Lo que importa son las inscripciones</b><span>Cada semana contamos, con los datos de la app, cuántas familias se registran y pagan en cada sede y cuánto cuesta cada una. No los clics.</span></div></li>
       <li><span class="n">2</span><div><b>Revisión semanal por sede</b><span>Si una sede consigue inscripciones más baratas, recibe más presupuesto; si otra se frena, se le baja, sin apagarla.</span></div></li>
       <li><span class="n">3</span><div><b>Anuncios siempre frescos</b><span>Cuando las familias empiezan a ver los mismos anuncios muchas veces, entran piezas nuevas.</span></div></li>
       <li><span class="n">4</span><div><b>Solo Facebook e Instagram</b><span>Se excluyen las apps externas de la red de Meta: en años anteriores se llevaron casi la mitad del presupuesto con clics accidentales.</span></div></li>
     </ol>
   </section>
 
-  <footer>Juventus Training Camps · Campaña ID Camps 2026-27 · Actualizado el 29 de septiembre de 2026.</footer>
+  <footer>Juventus Training Camps · Campaña ID Camps 2026-27 · Actualizado el 29 de septiembre de 2026. Datos de la cuenta publicitaria (dic-2023 a jul-2026) y de la base de inscritos de la app de registro (2024-2026).</footer>
 </main>
 
 </body>
