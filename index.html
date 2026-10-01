@@ -130,11 +130,23 @@
   .callout p { margin: 0 0 8px; color: var(--ink-2); font-size: 14px; } .callout p:last-child { margin: 0; }
   footer { margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: 12px; }
   @media (max-width: 560px) { .mes { grid-template-columns: 80px 1fr 70px; } }
+  .pais { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: #0B0C0E; border-bottom: 1px solid #2C3036; }
+  .pais .wrap { padding-block: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .pais a { color: #C9CCD2; text-decoration: none; font-weight: 700; font-size: 13px; letter-spacing: .04em; padding: 8px 14px; border-radius: 999px; border: 1px solid #2C3036; }
+  .pais a:hover { color: #fff; border-color: #5A5F68; }
+  .pais a[aria-current="page"] { background: #E7B43A; color: #111214; border-color: #E7B43A; }
 </style>
 </head>
 <body>
 
 
+<nav class="pais" aria-label="País">
+  <div class="wrap">
+    <a href="#usa" data-v="usa">ID Camps USA</a>
+    <a href="#mexico" data-v="mexico">ID Camp México · Monterrey</a>
+  </div>
+</nav>
+<div id="v-usa">
 <header class="top">
   <div class="wrap">
     <p class="eyebrow">Juventus Training Camps · Publicidad en Facebook e Instagram</p>
@@ -454,6 +466,169 @@
 
   <footer>Juventus Training Camps · Campaña ID Camps 2026-27 · Actualizado el 29 de septiembre de 2026. Datos de la cuenta publicitaria (dic-2023 a jul-2026) y de la base de inscritos de la app de registro (2024-2026).</footer>
 </main>
+</div>
+<div id="v-mexico" hidden>
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">Juventus Training Camps México · Publicidad en Facebook e Instagram</p>
+    <h1>ID Camp <em>Monterrey</em><br>17–19 dic 2026</h1>
+    <p class="sub">Diagnóstico de la cuenta publicitaria Juventus Camps MX (tres temporadas de campamentos de verano, 2024–2026) y el plan para el primer ID Camp de México: estructura, presupuesto y lo que esperamos.</p>
+    <dl class="keys">
+      <div><dt>Sede</dt><dd>Campus de Ciencias de la Salud UANL<small>Av. Gonzalitos 235, Mitras Centro</small></dd></div>
+      <div><dt>Fechas</dt><dd>17–19 dic<small>3 días · 5:00 a 8:00 PM</small></dd></div>
+      <div><dt>Meta</dt><dd>60 niños<small>≈ 52 familias que pagan</small></dd></div>
+      <div><dt>Presupuesto</dt><dd>$1.624<small>22 oct → 16 dic</small></dd></div>
+      <div><dt>Costo esperado</dt><dd>≈ $27 por niño<small>verano 2026 en Monterrey: $100</small></dd></div>
+    </dl>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>En pocas palabras</h2>
+    <p class="lede">La cuenta de México funcionó bien en 2024 y 2025. En 2026 se gastó el triple, pero se inscribieron la mitad de niños: casi 4 de cada 10 dólares se fueron a apps externas que generan clics falsos, y los anuncios se midieron con un "lead" que no es una inscripción.</p>
+    <div class="big">
+      <div><b>$43.870</b><span>invertidos en 3 temporadas (abr 2024 – jul 2026)</span></div>
+      <div><b>930</b><span>niños inscritos y pagados en los campamentos de verano</span></div>
+      <div><b>$11 → $145</b><span>costo por niño inscrito de 2024 a 2026</span></div>
+      <div><b>39 %</b><span>del gasto de 2026 se fue a Audience Network</span></div>
+    </div>
+  </section>
+
+  <section id="mx-temporadas">
+    <h2>Tres temporadas, comparadas</h2>
+    <p class="lede">Gasto en Meta frente a las familias que se registraron y pagaron en la app de registro. Todas las cifras son de campamentos de verano (5 días, julio y agosto): México nunca ha tenido un ID Camp ni ha pautado en diciembre.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Temporada</th><th>Ciudades</th><th>Inversión</th><th>"Leads" de Meta</th><th>Familias registradas</th><th>Familias que pagaron</th><th>Niños pagados</th><th>Costo por niño</th><th>Audience Network</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2024</strong><span class="note">abr – ago</span></td><td>Cancún, Puebla, Veracruz</td><td class="num">$3.351</td><td class="num">875</td><td class="num">806</td><td class="num">250 <span class="note">31 %</span></td><td class="num">296</td><td class="num"><strong>$11</strong></td><td class="num">0,3 %</td></tr>
+          <tr><td><strong>2025</strong><span class="note">feb – jul</span></td><td>+ Mérida, Guadalajara, CDMX</td><td class="num">$9.375</td><td class="num">1.353</td><td class="num">1.191</td><td class="num">350 <span class="note">29 %</span></td><td class="num">419</td><td class="num"><strong>$22</strong></td><td class="num">0,7 %</td></tr>
+          <tr class="now"><td><strong>2026</strong><span class="note">feb – jul</span></td><td>+ Monterrey (7 ciudades)</td><td class="num">$31.144</td><td class="num">4.037</td><td class="num">1.306</td><td class="num">197 <span class="note">15 %</span></td><td class="num">215</td><td class="num"><strong>$145</strong></td><td class="num"><strong>39 %</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="meses" role="img" aria-label="Costo por niño inscrito: 2024 11 dólares, 2025 22 dólares, 2026 145 dólares">
+      <div class="mes"><span>2024</span><span class="bar"><i style="width:7.6%"></i></span><span class="v">$11</span></div>
+      <div class="mes"><span>2025</span><span class="bar"><i style="width:15.4%"></i></span><span class="v">$22</span></div>
+      <div class="mes"><span>2026</span><span class="bar"><i style="width:100%;background:var(--red)"></i></span><span class="v">$145</span></div>
+    </div>
+    <p class="fine">Costo por niño = inversión de la temporada ÷ niños pagados en la app. Incluye a las familias que llegaron sin anuncios (orgánico, recomendación), así que es una cota baja del costo real; sirve para comparar temporadas entre sí. En 2026 Meta reportó 4.037 "leads" para 1.306 familias registradas en todo el año: 3 por familia, cuando en 2024 y 2025 era 1 por familia.</p>
+  </section>
+
+  <section id="mx-ciudades">
+    <h2>2026 ciudad por ciudad</h2>
+    <p class="lede">El problema no fue una sola ciudad: en todas se pagó mucho más por cada niño que en 2025. Las tres ciudades con más "leads" baratos (Cancún, Puebla y Veracruz) son las que menos inscritos tuvieron.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Ciudad</th><th>Campañas</th><th>Inversión</th><th>"Leads"</th><th>Costo por "lead"</th><th>Familias</th><th>Niños pagados</th><th>Costo por niño</th><th>2025</th></tr></thead>
+        <tbody>
+          <tr class="now"><td><strong>Monterrey</strong><span class="note">nueva en 2026</span></td><td class="num">6</td><td class="num">$5.805</td><td class="num">1.025</td><td class="num">$5,66</td><td class="num">258</td><td class="num">58</td><td class="num"><strong>$100</strong></td><td class="num">—</td></tr>
+          <tr><td><strong>Guadalajara</strong></td><td class="num">4</td><td class="num">$5.063</td><td class="num">533</td><td class="num">$9,50</td><td class="num">366</td><td class="num">62</td><td class="num"><strong>$82</strong></td><td class="num">$13</td></tr>
+          <tr><td><strong>CDMX</strong></td><td class="num">5</td><td class="num">$4.978</td><td class="num">489</td><td class="num">$10,18</td><td class="num">298</td><td class="num">41</td><td class="num"><strong>$121</strong></td><td class="num">$24</td></tr>
+          <tr><td><strong>Mérida</strong></td><td class="num">7</td><td class="num">$5.827</td><td class="num">316</td><td class="num">$18,44</td><td class="num">195</td><td class="num">35</td><td class="num"><strong>$166</strong></td><td class="num">$19</td></tr>
+          <tr><td><strong>Cancún</strong></td><td class="num">5</td><td class="num">$4.303</td><td class="num">716</td><td class="num">$6,01</td><td class="num">83</td><td class="num">9</td><td class="num"><strong>$478</strong></td><td class="num">$23</td></tr>
+          <tr><td><strong>Puebla</strong></td><td class="num">5</td><td class="num">$2.604</td><td class="num">488</td><td class="num">$5,34</td><td class="num">43</td><td class="num">8</td><td class="num"><strong>$326</strong></td><td class="num">$20</td></tr>
+          <tr><td><strong>Veracruz</strong></td><td class="num">4</td><td class="num">$2.175</td><td class="num">399</td><td class="num">$5,45</td><td class="num">63</td><td class="num">2</td><td class="num"><strong>$1.087</strong></td><td class="num">$133</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total 2026</td><td class="num">37</td><td class="num">$31.144</td><td class="num">4.037</td><td class="num">$7,71</td><td class="num">1.306</td><td class="num">215</td><td class="num">$145</td><td class="num">$22</td></tr></tfoot>
+      </table>
+    </div>
+    <p class="fine">Incluye una campaña "Todos · Juvekid" ($388) en el total. Familias y niños por ciudad según la sede de la inscripción en la app (las sedes "por anunciarse" se suman a su ciudad).</p>
+  </section>
+
+  <section id="mx-hallazgos">
+    <h2>Lo que encontramos en la cuenta</h2>
+    <p class="lede">Revisión de todas las campañas de la cuenta, sus conjuntos, sus anuncios, sus páginas de destino y el píxel.</p>
+    <ol class="steps">
+      <li><span class="n">1</span><div><b>El "lead" es un clic, no una inscripción</b><span>Igual que en USA: el píxel de México ("Juventus Camps MX 2024") cuenta como lead el clic en el botón "Regístrame" de la página. No sabe si la familia terminó el registro ni si pagó. Por eso las campañas parecían baratas ($5–7 por lead) mientras el costo real por niño se multiplicaba.</span></div></li>
+      <li><span class="n">2</span><div><b>Audience Network se llevó $12.167 en 2026</b><span>En 2024 y 2025 las ubicaciones eran casi solo Facebook e Instagram (menos del 1 % fuera). En 2026 se dejaron automáticas y el 39 % del gasto se fue a apps externas, con 179.080 clics en 624.649 impresiones: un clic cada 3,5 vistas, imposible en tráfico real. Ejemplos: Cancún V3 tuvo 24.975 clics con 34.390 impresiones; Veracruz V3, 12.622 con 16.381.</span></div></li>
+      <li><span class="n">3</span><div><b>Un anuncio de Monterrey llevaba a la página de Veracruz</b><span>"01 MONTERREY" (campaña Monterrey 2026 V2) gastó $1.297 y sumó 216 "leads", pero su enlace era juventuscampsmx.com/summer_camps/123/Veracruz. Los demás anuncios revisados sí llevaban a la página de su ciudad.</span></div></li>
+      <li><span class="n">4</span><div><b>Demasiadas campañas por ciudad</b><span>37 campañas en 2026 (versiones V2 a V6 por ciudad, más copias por cambio de precio). Cada campaña nueva reinicia el aprendizaje de Meta y divide el presupuesto.</span></div></li>
+      <li><span class="n">5</span><div><b>Público</b><span>Tres conjuntos por campaña: "Padres + Fútbol" (intereses de clubes europeos), "Summer Camp" (aire libre, vacaciones) y "Abierto Advantage+". Edad 18–65 y radio de 25 millas alrededor de la ciudad. La campaña de Cancún 2024 apuntaba por error a Campeche y Mérida.</span></div></li>
+      <li><span class="n">6</span><div><b>Cada vez paga una proporción menor</b><span>De las familias registradas pagó el 31 % en 2024, el 29 % en 2025 y el 15 % en 2026. En los ID Camps de USA paga el 51 %. Que una familia se registre no basta: hay que acompañarla hasta el pago.</span></div></li>
+    </ol>
+  </section>
+
+  <section id="mx-plan">
+    <h2>El plan para Monterrey</h2>
+    <p class="lede">Mismo método que los ID Camps de USA, que en 2024–2026 costaron $16 por niño en promedio: un conjunto por sede, seis anuncios distintos y un recordatorio, solo en Facebook e Instagram.</p>
+    <div class="scroll">
+      <table class="vs">
+        <thead><tr><th></th><th>Como se hizo en México (2026)</th><th class="now">ID Camp Monterrey</th></tr></thead>
+        <tbody>
+          <tr><td>Campañas</td><td>6 campañas solo para Monterrey (V2 a V6)</td><td class="now">1 campaña, 2 conjuntos: Monterrey y recordatorio</td></tr>
+          <tr><td>Ubicaciones</td><td>Automáticas: 39 % a Audience Network</td><td class="now">Solo Facebook e Instagram</td></tr>
+          <tr><td>Zona</td><td>Ciudad de Monterrey + 25 millas</td><td class="now">25 millas alrededor del Campus UANL (Mitras Centro), que cubre San Pedro, Guadalupe, Apodaca, San Nicolás y Santa Catarina</td></tr>
+          <tr><td>Edad</td><td>18–65</td><td class="now">Sugerencia 30–55 (padres de niños de 6 a 16)</td></tr>
+          <tr><td>Público</td><td>3 conjuntos (intereses + abierto)</td><td class="now">Abierto con Advantage+; recordatorio con quienes ya interactuaron y las 258 familias de Monterrey que se registraron en verano 2026</td></tr>
+          <tr><td>Anuncios</td><td>Videos y posts genéricos del verano</td><td class="now">6 anuncios en español de México con Monterrey y la fecha en la primera línea (póster de la sede, video de coaches, "una oportunidad real de ser visto", carrusel "¿Qué es un ID Camp?", "¿Mi hijo es suficientemente bueno?", "Entrena como Juventus") + video de Jesús para Monterrey</td></tr>
+          <tr><td>Destino</td><td>Página de cada ciudad (una apuntaba a Veracruz)</td><td class="now">Página del ID Camp de Monterrey, con UTM. Hoy no existe: hay que publicarla en juventuscampsmx.com</td></tr>
+          <tr><td>Medición</td><td>Clic en "Regístrame"</td><td class="now">Lo mismo mientras no haya otro evento, pero cada semana se cuentan las familias registradas y pagadas en la app</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="mx-presupuesto">
+    <h2>Presupuesto para 60 niños</h2>
+    <p class="lede">Del objetivo hacia atrás, con las tasas reales de México y de los ID Camps de USA.</p>
+    <div class="funnel" role="img" aria-label="Embudo: 60 niños, 52 familias que pagan, 155 familias registradas, 185 clics en Regístrame, 1.624 dólares">
+      <div class="fstep"><span>Niños inscritos</span><span class="bar"><i style="width:33%"></i></span><span class="v">60<small>la meta</small></span></div>
+      <div class="fstep"><span>Familias que pagan</span><span class="bar"><i style="width:29%"></i></span><span class="v">≈ 52<small>1,15 niños por familia</small></span></div>
+      <div class="fstep"><span>Familias registradas</span><span class="bar"><i style="width:83%"></i></span><span class="v">≈ 155<small>paga 1 de cada 3</small></span></div>
+      <div class="fstep"><span>Clics en "Regístrame"</span><span class="bar"><i style="width:100%"></i></span><span class="v">≈ 185<small>1,2 por familia</small></span></div>
+      <div class="fstep"><span>Inversión</span><span class="bar"><i style="width:100%;background:var(--red)"></i></span><span class="v">$1.624<small>≈ $9 por clic en Facebook e Instagram</small></span></div>
+    </div>
+    <div class="scroll" style="margin-top:16px">
+      <table>
+        <thead><tr><th>Referencia</th><th>Costo por niño</th><th>Para 60 niños</th></tr></thead>
+        <tbody>
+          <tr><td>ID Camps USA, promedio de 17 clínicas (2024–2026)</td><td class="num">$16</td><td class="num">$960</td></tr>
+          <tr><td>México, verano 2025 (sin Audience Network)</td><td class="num">$22</td><td class="num">$1.320</td></tr>
+          <tr class="now"><td><strong>Plan Monterrey</strong><span class="note">primer ID Camp de México, en diciembre</span></td><td class="num"><strong>≈ $27</strong></td><td class="num"><strong>$1.624</strong></td></tr>
+          <tr><td>Monterrey, verano 2026 (con Audience Network)</td><td class="num">$100</td><td class="num">$6.000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="scroll" style="margin-top:16px">
+      <table>
+        <thead><tr><th>Conjunto</th><th>Empieza</th><th>Termina</th><th>Por día</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Monterrey</strong><span class="note">25 millas · 30–55 sugerido · Facebook e Instagram</span></td><td class="num">22 oct</td><td class="num">16 dic</td><td class="num">$24</td><td class="num">$1.344</td></tr>
+          <tr><td><strong>Recordatorio Monterrey</strong><span class="note">interacción, visitantes y familias de verano 2026</span></td><td class="num">22 oct</td><td class="num">16 dic</td><td class="num">$5</td><td class="num">$280</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="4">Total</td><td class="num">$1.624</td></tr></tfoot>
+      </table>
+    </div>
+    <p class="lede" style="margin-top:14px">Se empieza 8 semanas antes, igual que las sedes de USA. Revisión semanal con los registros de la app: si a mediados de noviembre Monterrey va por debajo del ritmo (≈ 7 familias que pagan por semana), se suben $8–10 por día; si va por encima, se mantiene.</p>
+    <div class="callout">
+      <p><strong>Antes de lanzar hace falta:</strong></p>
+      <p>1 · Publicar el ID Camp de Monterrey en juventuscampsmx.com. Hoy la sección de clínicas está apagada en la web de México y la app de registro no tiene ninguna clínica activa para México.</p>
+      <p>2 · El video de Jesús para Monterrey (y para las sedes de USA que aún no lo tienen).</p>
+      <p>3 · Confirmar el precio y la moneda que verán las familias (no va en los anuncios, pero define cuánto se recupera).</p>
+    </div>
+  </section>
+
+  <footer>Juventus Training Camps México · ID Camp Monterrey 2026 · Actualizado el 1 de octubre de 2026. Datos de la cuenta publicitaria Juventus Camps MX (abr-2024 a jul-2026) y de la base de inscritos de la app de registro (verano 2024, 2025 y 2026).</footer>
+</main>
+</div>
+
+<script>
+(function () {
+  var usa = document.getElementById('v-usa'), mx = document.getElementById('v-mexico');
+  var links = document.querySelectorAll('.pais a');
+  function mostrar(primera) {
+    var esMx = location.hash === '#mexico' || location.hash.indexOf('#mx-') === 0;
+    usa.hidden = esMx; mx.hidden = !esMx;
+    links.forEach(function (a) { if (a.dataset.v === (esMx ? 'mexico' : 'usa')) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    if (!primera && (location.hash === '#mexico' || location.hash === '#usa')) window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', function () { mostrar(false); });
+  mostrar(true);
+})();
+</script>
 
 </body>
 </html>
